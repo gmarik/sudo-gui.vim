@@ -14,9 +14,32 @@ Depending on whether `vim` is run as a terminal app or as a GUI one a password w
 
 Currently console, and OSX GUI dialogs are provided. GTK and other - to come...
 
+## Installation
+
+If you're [`Vundle`](http://github.com/gmarik/vundle/) user add to your `.vimrc`
+
+    Bundle 'https://github.com/gmarik/sudo-write.git'
+
+and run `:BundleInstall` restarting `vim`
+
+
+Otherwise, run in your console:
+
+    git clone https://github.com/gmarik/sudo-write.git ~/.vim/sudo-write.git 
+
+And append to your `.vimrc`
+
+    set rtp+=~/.vim/sudo-write.git
+
+Don't forget to restart `vim`.
+
+## PS 
+
+I know ther's `sudo.vim` but I rather build prototype before contributing...
+
 ## TODO
 
-* SudoRead
 * GTK dialog
-* Screencast
 * docs
+* SudoRead?
+* Screencast?
