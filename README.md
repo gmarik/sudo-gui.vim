@@ -1,6 +1,6 @@
 ## About
 
-`sudo-write` is a `vim`, `MacVim`, `gvim` plugin for "sudo" operations.
+`sudo-gui.vim` is a GUI for a GUI `vim`.
 
 
 ## Why
@@ -9,7 +9,7 @@ The original idea isn't mine, but I just couldn't get `MacVim` working with `sud
 
 ## What
 
-`sudo-write` plugin provides `SudoWrite!` command (and a `W!` shortcut) allowing to write a file with administrative priviliges.
+`sudo-gui.vim` plugin provides `SudoWrite!` command (and a `W!` shortcut) allowing to write a file with administrative priviliges.
 Depending on whether `vim` is run as a terminal app or as a GUI one a password will be requested either as a console input or as a GUI dialog box.
 
 Currently console, and OSX GUI dialogs are provided. GTK and other - to come...
@@ -20,20 +20,9 @@ Currently console, and OSX GUI dialogs are provided. GTK and other - to come...
 
 If you're [`Vundle`](http://github.com/gmarik/vundle/) user add to your `.vimrc`
 
-    Bundle 'https://github.com/gmarik/sudo-write.git'
+    Bundle 'https://github.com/gmarik/sudo-gui.vim.git'
 
 and run `:BundleInstall` ( `Vim` restart required for Vundle prior to v0.5)
-
-
-Otherwise, run in your console:
-
-    git clone https://github.com/gmarik/sudo-write.git ~/.vim/sudo-write.git 
-
-And append to your `.vimrc`
-
-    set rtp+=~/.vim/sudo-write.git
-
-Don't forget to restart `vim`.
 
 ## PS 
 
