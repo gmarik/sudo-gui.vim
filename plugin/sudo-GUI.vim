@@ -14,7 +14,9 @@ comm! -bang SudoWriteMacGUI exec 'w !security execute-with-privileges /usr/bin/t
 "comm! -bang SudoWriteGtk exec TODO
 
 comm! -bang SudoWrite SudoWriteCli
-comm! -bang W SudoWrite
+if exists(':W') != 2
+    comm! -bang W SudoWrite
+endif
 
 if has('gui_running')
   if     has('mac') | comm! -bang SudoWrite SudoWriteMacGUI
