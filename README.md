@@ -20,7 +20,7 @@ Currently console, and OSX GUI dialogs are provided. GTK and other - to come...
 
 If you're [`Vundle`](http://github.com/gmarik/vundle/) user add to your `.vimrc`
 
-    Bundle 'https://github.com/gmarik/sudo-gui.vim.git'
+    Bundle 'gmarik/sudo-gui.vim'
 
 and run `:BundleInstall` ( `Vim` restart required for Vundle prior to v0.5)
 
