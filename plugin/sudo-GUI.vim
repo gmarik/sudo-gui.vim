@@ -18,11 +18,6 @@ if exists(':W') != 2
     comm! -bang W SudoWrite
 endif
 
-if has('gui_running')
-  if     has('mac') | comm! -bang SudoWrite SudoWriteMacGUI
-  elseif executable('pkexec') == 1 | comm! -bang SudoWrite SudoWritePK
-  endif
+if has('gui_running') && has('mac') | comm! -bang SudoWrite SudoWriteMacGUI
+elseif executable('pkexec') == 1    | comm! -bang SudoWrite SudoWritePK
 endif
-
-
-
