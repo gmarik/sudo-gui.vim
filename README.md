@@ -12,7 +12,9 @@ The original idea isn't mine, but I just couldn't get `MacVim` working with `sud
 `sudo-gui.vim` plugin provides the `SudoWrite!` command, along with a `W!` shortcut, enabling a file with administrative priviliges to be written.
 Depending on whether `vim` is run as a GUI or terminal app, a password will be requested at the console or in a GUI dialog box.
 
-Currently console and OSX GUI dialogs are provided. GTK and others to come...
+* On OS X built-in security dialog will be used.
+* On Linux polkit's `pkexec` will be invoked if available.
+* As a fallback you'll be able to authenticate in the console using `sudo`.
 
 ![Screenshot](http://lh5.ggpht.com/_SriKiRB4s00/TP3DWZ5mSSI/AAAAAAAAG78/ol_SQu2dM-M/s800/shot.png)
 
@@ -31,7 +33,6 @@ I know there is a `sudo.vim` but I'd rather prototype before contributing...
 
 ## TODO
 
-* GTK dialog
 * docs
 * SudoRead?
 * Screencast?

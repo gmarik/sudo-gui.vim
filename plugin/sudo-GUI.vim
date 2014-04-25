@@ -11,7 +11,7 @@ let g:loaded_sudo_write = 1
 
 comm! -bang SudoWriteCli    exec 'w !sudo tee % > /dev/null' | e!
 comm! -bang SudoWriteMacGUI exec 'w !security execute-with-privileges /usr/bin/tee % > /dev/null' | e!
-"comm! -bang SudoWriteGtk exec TODO
+comm! -bang SudoWritePK     exec 'w !pkexec tee % > /dev/null' | e!
 
 comm! -bang SudoWrite SudoWriteCli
 if exists(':W') != 2
@@ -20,8 +20,7 @@ endif
 
 if has('gui_running')
   if     has('mac') | comm! -bang SudoWrite SudoWriteMacGUI
-  elseif has('gtk')
-    " TODO
+  elseif executable('pkexec') == 1 | comm! -bang SudoWrite SudoWritePK
   endif
 endif
 
