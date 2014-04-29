@@ -9,9 +9,9 @@ if exists('g:loaded_sudo_write')
 endif
 let g:loaded_sudo_write = 1
 
-comm! -bang SudoWriteCli    exec 'w !sudo tee % > /dev/null' | e!
-comm! -bang SudoWriteMacGUI exec 'w !security execute-with-privileges /usr/bin/tee % > /dev/null' | e!
-comm! -bang SudoWritePK     exec 'w !pkexec tee % > /dev/null' | e!
+comm! -bang SudoWriteCli    exec 'w !sudo tee %:p > /dev/null' | e!
+comm! -bang SudoWriteMacGUI exec 'w !security execute-with-privileges /usr/bin/tee %:p > /dev/null' | e!
+comm! -bang SudoWritePK     exec 'w !pkexec tee %:p > /dev/null' | e!
 
 comm! -bang SudoWrite SudoWriteCli
 if exists(':W') != 2
